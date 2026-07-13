@@ -79,6 +79,12 @@ function maxAteliersFor(formule) {
   return 4;
 }
 
+function getTodayDateValue() {
+  const now = new Date();
+  const localDate = new Date(now.getTime() - now.getTimezoneOffset() * 60000);
+  return localDate.toISOString().slice(0, 10);
+}
+
 function AtelierIcon({ type }) {
   if (type === "leaf") {
     return (
@@ -131,6 +137,7 @@ export default function Home() {
   const [selectedAteliers, setSelectedAteliers] = useState([]);
 
   const maxAteliers = useMemo(() => maxAteliersFor(formule), [formule]);
+  const todayDate = useMemo(() => getTodayDateValue(), []);
 
   function toggleAtelier(value) {
     setSelectedAteliers((current) => {
@@ -482,7 +489,7 @@ export default function Home() {
                 </label>
                 <label>
                   Date souhaitée
-                  <input name="requestedDate" type="date" />
+                  <input name="requestedDate" type="date" min={todayDate} />
                 </label>
                 <label>
                   Pause Gourmande
