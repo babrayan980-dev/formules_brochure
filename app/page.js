@@ -382,10 +382,19 @@ export default function Home() {
               <p>Les revenus des ateliers participent au fonctionnement quotidien du foyer.</p>
             </article>
             <article className="palmier-impact">
-              <Image src="/images/ecole-palmier-logo.png" alt="Logo École Palmier" width={94} height={94} />
-              <span>L'École Palmier</span>
+              <div style={{ display: 'flex', justifyContent: 'center'}}>
+                <Image
+                  src="/images/ecole-palmier-logo-clean.png"
+                  className=""
+                  alt="Logo École Palmier"
+                  width={94}
+                  height={94}
+                />
+              </div>
+              <center><span>L'École Palmier</span></center>
               <h3>Une scolarité pour les enfants accompagnés par l'association.</h3>
               <p>Le logo vert signale les contenus liés à l'École Palmier et à son action éducative.</p>
+        
             </article>
             <article>
               <span>Le CFI</span>
