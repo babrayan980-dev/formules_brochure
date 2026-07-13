@@ -297,6 +297,46 @@ export default function Home() {
           </p>
         </section>
 
+        <section className="brochure-section" aria-label="Brochure interactive de la sortie pédagogique">
+          <div className="brochure-copy">
+            <span className="eyebrow">Brochure vivante</span>
+            <h2>Feuilletez l'expérience comme un vrai flyer.</h2>
+            <p>
+              Une sortie claire à présenter aux équipes pédagogiques : le programme, l'impact et les
+              formules sont réunis comme sur une brochure, mais avec le mouvement d'un site.
+            </p>
+            <button className="btn btn-primary" type="button" onClick={() => setModalOpen(true)}>
+              Demander cette sortie
+            </button>
+          </div>
+
+          <div className="brochure-3d" aria-hidden="true">
+            <div className="brochure-panel brochure-left">
+              <span className="panel-kicker">01</span>
+              <h3>Choisir</h3>
+              <p>Découverte, Immersion ou formule sur mesure selon l'âge et le rythme de la classe.</p>
+              <div className="paper-sticker">4 ateliers</div>
+            </div>
+            <div className="brochure-panel brochure-center">
+              <Image src="/images/bab-rayan-logo.png" alt="" width={82} height={82} />
+              <span className="panel-kicker">Sortie solidaire</span>
+              <h3>Apprendre avec les mains</h3>
+              <p>Arts plastiques, potager, poterie et pâtisserie dans un cadre associatif encadré.</p>
+              <div className="mini-route">
+                <span>Accueil</span>
+                <span>Ateliers</span>
+                <span>Impact</span>
+              </div>
+            </div>
+            <div className="brochure-panel brochure-right">
+              <span className="panel-kicker">03</span>
+              <h3>Contribuer</h3>
+              <p>Chaque réservation soutient le foyer, l'École Palmier et le CFI de Bab Rayan.</p>
+              <div className="paper-sticker green">RSE</div>
+            </div>
+          </div>
+        </section>
+
         <section className="gallery-section" aria-label="Galerie des enfants en atelier">
           {galleryImages.map((image, index) => (
             <div className={`gallery-item gallery-${index + 1}`} key={image.src}>
@@ -382,16 +422,15 @@ export default function Home() {
               <p>Les revenus des ateliers participent au fonctionnement quotidien du foyer.</p>
             </article>
             <article className="palmier-impact">
-              <div style={{ display: 'flex', justifyContent: 'center'}}>
+              <div className="palmier-logo-wrap">
                 <Image
                   src="/images/ecole-palmier-logo-clean.png"
-                  className=""
                   alt="Logo École Palmier"
                   width={94}
                   height={94}
                 />
               </div>
-              <center><span>L'École Palmier</span></center>
+              <span>L'École Palmier</span>
               <h3>Une scolarité pour les enfants accompagnés par l'association.</h3>
               <p>Le logo vert signale les contenus liés à l'École Palmier et à son action éducative.</p>
         
