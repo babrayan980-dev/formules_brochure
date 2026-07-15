@@ -64,12 +64,35 @@ const galleryImages = [
     alt: "Enfants de l'École Palmier pendant un atelier peinture",
   },
   {
-    src: "/images/kids-workshop-2.png",
+    src: "/images/pic1.jpeg",
     alt: "Enfant accompagné par une encadrante pendant un atelier créatif",
   },
   {
-    src: "/images/kids-workshop-3.png",
+    src: "/images/pic2.jpeg",
     alt: "Enfant souriant pendant une activité peinture",
+  },
+];
+
+const Icons = [
+  {
+    icon: "https://firebasestorage.googleapis.com/v0/b/valid-bab-rayan.firebasestorage.app/o/protection%2Ficon1.webp?alt=media&token=9bbf7d2b-813e-4b1f-87d8-b2c47d4b4fbe",
+    alt: "+450 enfants pris en charge",
+  },
+  {
+    icon: "https://firebasestorage.googleapis.com/v0/b/valid-bab-rayan.firebasestorage.app/o/protection%2Ficon2.webp?alt=media&token=dbf24c1c-3a69-4391-829a-9f9c24c6a0ea",
+    alt: "16 encadrants",
+  },
+  {
+    icon: "https://firebasestorage.googleapis.com/v0/b/valid-bab-rayan.firebasestorage.app/o/protection%2Ficon3.webp?alt=media&token=e5554944-0985-4227-a2c4-2725ca9bdf98",
+    alt: "1300 bénévoles",
+  },
+  {
+    icon: "https://firebasestorage.googleapis.com/v0/b/valid-bab-rayan.firebasestorage.app/o/protection%2Ficon4.webp?alt=media&token=33e406fa-cfe5-4043-abfc-b28c603a02a3",
+    alt: "7950 mètres carrés de sites Bab Rayan",
+  },
+  {
+    icon: "https://firebasestorage.googleapis.com/v0/b/valid-bab-rayan.firebasestorage.app/o/protection%2Ficon5.webp?alt=media&token=d7156726-dbac-43f3-b3cc-330af9bff0bb",
+    alt: "660 repas offerts par jour",
   },
 ];
 
@@ -121,7 +144,14 @@ function AtelierIcon({ type }) {
   return (
     <svg viewBox="0 0 80 80" aria-hidden="true">
       <rect x="17" y="20" width="20" height="17" rx="3" />
-      <rect x="42" y="28" width="20" height="17" rx="3" transform="rotate(-8 52 36)" />
+      <rect
+        x="42"
+        y="28"
+        width="20"
+        height="17"
+        rx="3"
+        transform="rotate(-8 52 36)"
+      />
       <circle cx="28" cy="57" r="8" />
       <path d="m49 49 8 13H41l8-13Z" />
     </svg>
@@ -199,11 +229,13 @@ export default function Home() {
       setModalOpen(false);
       setStatus({
         type: "success",
-        message: "Merci, votre demande a bien été envoyée. Nous vous répondrons rapidement.",
+        message:
+          "Merci, votre demande a bien été envoyée. Nous vous répondrons rapidement.",
       });
       setNotification({
         type: "success",
-        message: "Votre demande a bien été envoyée. L'équipe Bab Rayan vous répondra rapidement.",
+        message:
+          "Votre demande a bien été envoyée. L'équipe Bab Rayan vous répondra rapidement.",
       });
       window.setTimeout(() => {
         setNotification({ type: "", message: "" });
@@ -230,7 +262,13 @@ export default function Home() {
     <>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Bab Rayan accueil">
-          <Image src="/images/bab-rayan-logo.png" alt="Logo Bab Rayan" width={72} height={72} priority />
+          <Image
+            src="/images/bab-rayan-logo.png"
+            alt="Logo Bab Rayan"
+            width={72}
+            height={72}
+            priority
+          />
           <span>
             <strong>Bab Rayan</strong>
             <small>Sorties pédagogiques solidaires</small>
@@ -244,7 +282,11 @@ export default function Home() {
           <a href="#contact">Contact</a>
         </nav>
 
-        <button className="header-cta" type="button" onClick={() => setModalOpen(true)}>
+        <button
+          className="header-cta"
+          type="button"
+          onClick={() => setModalOpen(true)}
+        >
           Réserver
         </button>
       </header>
@@ -254,14 +296,20 @@ export default function Home() {
           <div className="hero-copy">
             <span className="eyebrow">Écoles internationales · Casablanca</span>
             <h1>
-              Une sortie créative qui finance le foyer et <span>l'École Palmier.</span>
+              Une sortie créative qui soutient les enfants de l'association{" "}
+              <span>Bab Rayan.</span>
             </h1>
             <p>
-              Vos élèves vivent une matinée d'ateliers à Bab Rayan pendant que leur venue contribue
-              directement à l'autofinancement de l'association, du foyer et de l'École Palmier.
+              Vos élèves vivent une matinée d'ateliers à Bab Rayan pendant que
+              leur venue contribue directement à l'autofinancement de
+              l'association, du foyer et de l'École Palmier.
             </p>
             <div className="hero-actions">
-              <button className="btn btn-primary" type="button" onClick={() => setModalOpen(true)}>
+              <button
+                className="btn btn-primary"
+                type="button"
+                onClick={() => setModalOpen(true)}
+              >
                 Demander une réservation
               </button>
               <a className="btn btn-secondary" href="#impact">
@@ -270,16 +318,35 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hero-visual" aria-label="Photos des ateliers Bab Rayan">
+          <div
+            className="hero-visual"
+            aria-label="Photos des ateliers Bab Rayan"
+          >
             <div className="photo-card photo-main">
-              <Image src="/images/kids-workshop-1.png" alt={galleryImages[0].alt} fill sizes="(max-width: 900px) 92vw, 45vw" priority />
+              <Image
+                src="/images/kids-workshop-1.png"
+                alt={galleryImages[0].alt}
+                fill
+                sizes="(max-width: 900px) 92vw, 45vw"
+                priority
+              />
             </div>
             <div className="floating-card logo-card">
-              <Image src="/images/bab-rayan-logo.png" alt="Logo Bab Rayan" width={88} height={88} />
+              <Image
+                src="/images/bab-rayan-logo.png"
+                alt="Logo Bab Rayan"
+                width={88}
+                height={88}
+              />
               <span>Reconnue d'Utilité Publique</span>
             </div>
             <div className="floating-card palmier-card">
-              <Image src="/images/ecole-palmier-logo-clean.png" alt="Logo École Palmier" width={82} height={82} />
+              <Image
+                src="/images/ecole-palmier-logo-clean.png"
+                alt="Logo École Palmier"
+                width={82}
+                height={82}
+              />
               <span>École Palmier</span>
             </div>
           </div>
@@ -291,37 +358,48 @@ export default function Home() {
             <h2>Bab Rayan, une association en trois volets.</h2>
           </div>
           <p>
-          Bab Rayan est une association qui réunit un foyer d'enfants, l'École Palmier qui les scolarise — et qui accueille aussi des enfants de mères célibataires en situation de précarité — ainsi que le CFI, son centre de formation et d'insertion.
-          
-          Pour financer cet ensemble, Bab Rayan ouvre ses ateliers aux classes des écoles internationales le temps d'une sortie encadrée. Chaque réservation contribue directement à l'autofinancement de l'association.
+            Bab Rayan est une association qui réunit un foyer d'enfants, l'École
+            Palmier qui les scolarise — et qui accueille aussi des enfants de
+            mères célibataires en situation de précarité — ainsi que le CFI, son
+            centre de formation et d'insertion. Reconnue d'utilité publique,
+            l'association ouvre ses ateliers aux classes des écoles
+            internationales le temps d'une sortie encadrée : une manière
+            concrète de soutenir durablement son action.
           </p>
         </section>
 
-        <section className="brochure-section" aria-label="Brochure interactive de la sortie pédagogique">
+        <section
+          className="brochure-section"
+          aria-label="Brochure interactive de la sortie pédagogique"
+        >
           <div className="brochure-copy">
             <span className="eyebrow">Brochure vivante</span>
             <h2>Feuilletez l'expérience comme un vrai flyer.</h2>
-            <p>
-              Une sortie claire à présenter aux équipes pédagogiques : le programme, l'impact et les
-              formules sont réunis comme sur une brochure, mais avec le mouvement d'un site.
-            </p>
-            <button className="btn btn-primary" type="button" onClick={() => setModalOpen(true)}>
-              Demander cette sortie
-            </button>
           </div>
 
           <div className="brochure-3d" aria-hidden="true">
             <div className="brochure-panel brochure-left">
               <span className="panel-kicker">01</span>
               <h3>Choisir</h3>
-              <p>Découverte, Immersion ou formule sur mesure selon l'âge et le rythme de la classe.</p>
+              <p>
+                Découverte, Immersion ou formule sur mesure selon l'âge et le
+                rythme de la classe.
+              </p>
               <div className="paper-sticker">4 ateliers</div>
             </div>
             <div className="brochure-panel brochure-center">
-              <Image src="/images/bab-rayan-logo.png" alt="" width={82} height={82} />
+              <Image
+                src="/images/bab-rayan-logo.png"
+                alt=""
+                width={82}
+                height={82}
+              />
               <span className="panel-kicker">Sortie solidaire</span>
               <h3>Apprendre avec les mains</h3>
-              <p>Arts plastiques, potager, poterie et pâtisserie dans un cadre associatif encadré.</p>
+              <p>
+                Arts plastiques, potager, poterie et pâtisserie dans un cadre
+                associatif encadré.
+              </p>
               <div className="mini-route">
                 <span>Accueil</span>
                 <span>Ateliers</span>
@@ -331,16 +409,30 @@ export default function Home() {
             <div className="brochure-panel brochure-right">
               <span className="panel-kicker">03</span>
               <h3>Contribuer</h3>
-              <p>Chaque réservation soutient le foyer, l'École Palmier et le CFI de Bab Rayan.</p>
+              <p>
+                Chaque réservation soutient le foyer, l'École Palmier et le CFI
+                de Bab Rayan.
+              </p>
               <div className="paper-sticker green">RSE</div>
             </div>
           </div>
         </section>
 
-        <section className="gallery-section" aria-label="Galerie des enfants en atelier">
+        <section
+          className="gallery-section"
+          aria-label="Galerie des enfants en atelier"
+        >
           {galleryImages.map((image, index) => (
-            <div className={`gallery-item gallery-${index + 1}`} key={image.src}>
-              <Image src={image.src} alt={image.alt} fill sizes="(max-width: 760px) 92vw, 31vw" />
+            <div
+              className={`gallery-item gallery-${index + 1}`}
+              key={image.src}
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                sizes="(max-width: 760px) 92vw, 31vw"
+              />
             </div>
           ))}
         </section>
@@ -349,12 +441,19 @@ export default function Home() {
           <div className="section-heading">
             <span className="eyebrow">Les ateliers</span>
             <h2>Quatre univers pour apprendre avec les mains.</h2>
-            <p>Chaque atelier est encadré par un artisan, une formatrice ou un membre de l'association.</p>
+            <p>
+              Les ateliers sont encadrés par des prestataires qualifiés (chefs
+              pâtissiers, art therapists, éducateurs confirmés) et sont réalisés
+              avec du matériel de qualité professionnelle.
+            </p>
           </div>
 
           <div className="atelier-grid">
             {ateliers.map((atelier) => (
-              <article className={`atelier-card ${atelier.color}`} key={atelier.title}>
+              <article
+                className={`atelier-card ${atelier.color}`}
+                key={atelier.title}
+              >
                 <div className="atelier-icon">
                   <AtelierIcon type={atelier.icon} />
                 </div>
@@ -370,12 +469,18 @@ export default function Home() {
           <div className="section-heading">
             <span className="eyebrow">Formules & tarifs</span>
             <h2>Deux parcours selon l'âge du groupe.</h2>
-            <p>Tarif par enfant, groupe scolaire. Les créneaux peuvent être adaptés sur demande.</p>
+            <p>
+              Tarif par enfant, groupe scolaire. Les créneaux peuvent être
+              adaptés sur demande.
+            </p>
           </div>
 
           <div className="formula-grid">
             {formulas.map((item) => (
-              <article className={`formula-card ${item.accent}`} key={item.name}>
+              <article
+                className={`formula-card ${item.accent}`}
+                key={item.name}
+              >
                 <span className="formula-age">{item.age}</span>
                 <h3>{item.name}</h3>
                 <p>{item.subtitle}</p>
@@ -397,49 +502,31 @@ export default function Home() {
               <span>Option</span>
               <h3>Pause Gourmande</h3>
               <p>
-                Eau, jus et préparations maison réalisées par les stagiaires du CFI de Bab Rayan.
+                Eau, jus et préparations maison réalisées par les stagiaires du
+                CFI de Bab Rayan.
               </p>
             </div>
             <strong>+ 30 MAD</strong>
           </div>
         </section>
 
-        <section className="impact-section" id="impact">
-          <div className="section-heading light">
-            <span className="eyebrow">Impact & RSE</span>
-            <h2>Votre sortie finance une mission sociale durable.</h2>
-            <p>
-              Chaque réservation aide l'association à financer le foyer et l'École Palmier, qui
-              scolarise les enfants du foyer ainsi que des enfants de mères célibataires en situation
-              de précarité.
-            </p>
-          </div>
+        <section
+          className="impact-section"
+          id="impact"
+          aria-labelledby="impact-title"
+        >
+          <h2 id="impact-title">Bab Rayan en chiffres</h2>
+          <div className="impact-title-line" aria-hidden="true" />
 
-          <div className="impact-grid">
-            <article>
-              <span>Le foyer</span>
-              <h3>Un lieu de vie pour les enfants accueillis par Bab Rayan.</h3>
-              <p>Les revenus des ateliers participent au fonctionnement quotidien du foyer.</p>
-            </article>
-            <article className="palmier-impact">
-              <div className="palmier-logo-wrap">
-                <Image
-                  src="/images/ecole-palmier-logo-clean.png"
-                  alt="Logo École Palmier"
-                  width={94}
-                  height={94}
-                />
-              </div>
-              <span>L'École Palmier</span>
-              <h3>Une scolarité pour les enfants accompagnés par l'association.</h3>
-              <p>Le logo vert signale les contenus liés à l'École Palmier et à son action éducative.</p>
-        
-            </article>
-            <article>
-              <span>Le CFI</span>
-              <h3>Formation, insertion et savoir-faire transmis aux élèves.</h3>
-              <p>Les ateliers mettent en valeur les compétences des artisans et stagiaires du CFI.</p>
-            </article>
+          <div className="impact-stats">
+            {Icons.map((item) => (
+              <img
+                className="impact-stat"
+                src={item.icon}
+                alt={item.alt}
+                key={item.icon}
+              />
+            ))}
           </div>
         </section>
 
@@ -470,9 +557,16 @@ export default function Home() {
 
           <div className="final-cta">
             <h2>Parlons effectif, dates et ateliers.</h2>
-            <p>Remplissez le formulaire, l'équipe Bab Rayan vous recontacte pour confirmer le programme.</p>
-            <button className="btn btn-primary" type="button" onClick={() => setModalOpen(true)}>
-              Ouvrir le formulaire
+            <p>
+              Remplissez le formulaire, l'équipe Bab Rayan vous recontacte pour
+              confirmer le programme.
+            </p>
+            <button
+              className="btn btn-primary"
+              type="button"
+              onClick={() => setModalOpen(true)}
+            >
+              Contactez-nous
             </button>
           </div>
         </section>
@@ -480,29 +574,61 @@ export default function Home() {
 
       <footer>
         <span>Bab Rayan - Association & école</span>
-        <span>Un modèle autofinancé au service du foyer et de l'École Palmier</span>
+        <span>
+          Un modèle autofinancé au service du foyer et de l'École Palmier
+        </span>
       </footer>
 
       {notification.message ? (
-        <div className={`toast ${notification.type}`} role="status" aria-live="polite">
-          <strong>{notification.type === "success" ? "Demande envoyée" : "Envoi impossible"}</strong>
+        <div
+          className={`toast ${notification.type}`}
+          role="status"
+          aria-live="polite"
+        >
+          <strong>
+            {notification.type === "success"
+              ? "Demande envoyée"
+              : "Envoi impossible"}
+          </strong>
           <span>{notification.message}</span>
-          <button type="button" onClick={() => setNotification({ type: "", message: "" })} aria-label="Fermer la notification">
+          <button
+            type="button"
+            onClick={() => setNotification({ type: "", message: "" })}
+            aria-label="Fermer la notification"
+          >
             ×
           </button>
         </div>
       ) : null}
 
       {modalOpen ? (
-        <div className="modal-backdrop" role="presentation" onMouseDown={() => setModalOpen(false)}>
-          <div className="modal" role="dialog" aria-modal="true" aria-labelledby="booking-title" onMouseDown={(event) => event.stopPropagation()}>
-            <button className="modal-close" type="button" onClick={() => setModalOpen(false)} aria-label="Fermer le formulaire">
+        <div
+          className="modal-backdrop"
+          role="presentation"
+          onMouseDown={() => setModalOpen(false)}
+        >
+          <div
+            className="modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="booking-title"
+            onMouseDown={(event) => event.stopPropagation()}
+          >
+            <button
+              className="modal-close"
+              type="button"
+              onClick={() => setModalOpen(false)}
+              aria-label="Fermer le formulaire"
+            >
               ×
             </button>
             <div className="form-heading">
               <span className="eyebrow">Réservation</span>
               <h2 id="booking-title">Réserver une sortie pour votre classe</h2>
-              <p>Aucun paiement n'est demandé à ce stade. Nous confirmons la date et le programme par email.</p>
+              <p>
+                Aucun paiement n'est demandé à ce stade. Nous confirmons la date
+                et le programme par email.
+              </p>
             </div>
 
             <form className="booking-form" onSubmit={handleSubmit}>
@@ -525,10 +651,20 @@ export default function Home() {
                 </label>
                 <label>
                   Formule souhaitée
-                  <select name="formule" value={formule} onChange={handleFormulaChange}>
-                    <option value="Parcours Découverte (4-8 ans)">Parcours Découverte - 4 à 8 ans</option>
-                    <option value="Parcours Immersion (8-10 ans)">Parcours Immersion - 8 à 10 ans</option>
-                    <option value="Prestation sur mesure">Prestation sur mesure</option>
+                  <select
+                    name="formule"
+                    value={formule}
+                    onChange={handleFormulaChange}
+                  >
+                    <option value="Parcours Découverte (4-8 ans)">
+                      Parcours Découverte - 4 à 8 ans
+                    </option>
+                    <option value="Parcours Immersion (8-10 ans)">
+                      Parcours Immersion - 8 à 10 ans
+                    </option>
+                    <option value="Prestation sur mesure">
+                      Prestation sur mesure
+                    </option>
                   </select>
                 </label>
                 <label>
@@ -550,15 +686,20 @@ export default function Home() {
 
               <fieldset>
                 <legend>
-                  Ateliers souhaités <small>({maxAteliers} maximum pour cette formule)</small>
+                  Ateliers souhaités{" "}
+                  <small>({maxAteliers} maximum pour cette formule)</small>
                 </legend>
                 <div className="checkbox-grid">
                   {ateliers.map((atelier) => {
                     const checked = selectedAteliers.includes(atelier.title);
-                    const disabled = !checked && selectedAteliers.length >= maxAteliers;
+                    const disabled =
+                      !checked && selectedAteliers.length >= maxAteliers;
 
                     return (
-                      <label className={disabled ? "disabled" : ""} key={atelier.title}>
+                      <label
+                        className={disabled ? "disabled" : ""}
+                        key={atelier.title}
+                      >
                         <input
                           type="checkbox"
                           checked={checked}
@@ -581,11 +722,17 @@ export default function Home() {
                 />
               </label>
 
-              <button className="btn btn-primary submit-btn" type="submit" disabled={isSubmitting}>
+              <button
+                className="btn btn-primary submit-btn"
+                type="submit"
+                disabled={isSubmitting}
+              >
                 {isSubmitting ? "Envoi en cours..." : "Envoyer la demande"}
               </button>
 
-              {status.message ? <p className={`form-status ${status.type}`}>{status.message}</p> : null}
+              {status.message ? (
+                <p className={`form-status ${status.type}`}>{status.message}</p>
+              ) : null}
             </form>
           </div>
         </div>
