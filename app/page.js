@@ -2,6 +2,18 @@
 
 import Image from "next/image";
 import { useMemo, useState } from "react";
+import {
+  FiMail,
+  FiPhone,
+  FiMapPin,
+  FiArrowUpRight,
+} from "react-icons/fi";
+import {
+  FaInstagram,
+  FaLinkedinIn,
+  FaFacebookF,
+  FaGlobe,
+} from "react-icons/fa";
 
 const ateliers = [
   {
@@ -556,11 +568,48 @@ export default function Home() {
           </div>
 
           <div className="final-cta">
-            <h2>Parlons effectif, dates et ateliers.</h2>
+            <span className="eyebrow">Contact</span>
+            <h2>Contactez-nous</h2>
             <p>
-              Remplissez le formulaire, l'équipe Bab Rayan vous recontacte pour
-              confirmer le programme.
+              Une question ou une demande de sortie scolaire ? L'équipe Bab
+              Rayan vous répond rapidement.
             </p>
+            <div className="contact-info">
+              <a href="mailto:contact@babrayan.ma">
+                <span className="contact-icon" aria-hidden="true">
+                  <FiMail />
+                </span>
+                <span className="contact-text">
+                  <span>Email</span>
+                  <strong>contact@babrayan.ma</strong>
+                </span>
+                <FiArrowUpRight className="contact-arrow" aria-hidden="true" />
+              </a>
+              <a href="tel:+212610023555">
+                <span className="contact-icon" aria-hidden="true">
+                  <FiPhone />
+                </span>
+                <span className="contact-text">
+                  <span>Téléphone</span>
+                  <strong>+212 610 023 555</strong>
+                </span>
+                <FiArrowUpRight className="contact-arrow" aria-hidden="true" />
+              </a>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=4%20Rue%20Bayt%20Lahm%2C%20Quartier%20Palmier%2C%2020100%20Casablanca%2C%20Maroc"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className="contact-icon" aria-hidden="true">
+                  <FiMapPin />
+                </span>
+                <span className="contact-text">
+                  <span>Adresse</span>
+                  <strong>4 Rue Bayt Lahm, Quartier Palmier, Casablanca</strong>
+                </span>
+                <FiArrowUpRight className="contact-arrow" aria-hidden="true" />
+              </a>
+            </div>
             <button
               className="btn btn-primary"
               type="button"
@@ -572,11 +621,91 @@ export default function Home() {
         </section>
       </main>
 
-      <footer>
-        <span>Bab Rayan - Association & école</span>
-        <span>
-          Un modèle autofinancé au service du foyer et de l'École Palmier
-        </span>
+      <footer className="site-footer">
+        <div className="footer-top">
+          <div className="footer-brand">
+            <Image
+              src="/images/bab-rayan-logo.png"
+              alt="Logo Bab Rayan"
+              width={72}
+              height={72}
+            />
+            <div>
+              <strong>Bab Rayan</strong>
+              <p>
+                Association reconnue d'utilité publique au service de l'enfance.
+              </p>
+            </div>
+          </div>
+
+          <nav className="footer-links" aria-label="Navigation pied de page">
+            <h3>Navigation</h3>
+            <a href="#top">Accueil</a>
+            <a href="#ateliers">Ateliers</a>
+            <a href="#formules">Formules</a>
+            <a href="#impact">Impact</a>
+            <a href="#contact">Contact</a>
+          </nav>
+
+          <div className="footer-contact">
+            <h3>Contact</h3>
+            <a href="mailto:contact@babrayan.ma">
+              <FiMail aria-hidden="true" />
+              contact@babrayan.ma
+            </a>
+            <a href="tel:+212610023555">
+              <FiPhone aria-hidden="true" />
+              +212 610 023 555
+            </a>
+            <span>
+              <FiMapPin aria-hidden="true" />
+              4 Rue Bayt Lahm, Quartier Palmier, Casablanca
+            </span>
+          </div>
+
+          <div className="footer-social">
+            <h3>Nous suivre</h3>
+            <div className="footer-social-icons">
+              <a
+                href="https://www.instagram.com/association_babrayan"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram"
+              >
+                <FaInstagram aria-hidden="true" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/associationbabrayan/posts/?feedView=all"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedinIn aria-hidden="true" />
+              </a>
+              <a
+                href="https://www.facebook.com/Associationbabrayan"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Facebook"
+              >
+                <FaFacebookF aria-hidden="true" />
+              </a>
+              <a
+                href="https://www.babrayan.ma/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Site web"
+              >
+                <FaGlobe aria-hidden="true" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <span>© {new Date().getFullYear()} Bab Rayan. Tous droits réservés.</span>
+          <span>Un modèle autofinancé au service du foyer et de l'École Palmier</span>
+        </div>
       </footer>
 
       {notification.message ? (
