@@ -2,12 +2,7 @@
 
 import Image from "next/image";
 import { useMemo, useState } from "react";
-import {
-  FiMail,
-  FiPhone,
-  FiMapPin,
-  FiArrowUpRight,
-} from "react-icons/fi";
+import { FiMail, FiPhone, FiMapPin, FiArrowUpRight } from "react-icons/fi";
 import {
   FaInstagram,
   FaLinkedinIn,
@@ -65,7 +60,8 @@ const formulas = [
     points: [
       "Un atelier plus élaboré, techniques approfondies",
       "Format long pour aller au bout d'une réalisation",
-      "Groupes encadrés par nos artisans confirmés",
+      "Groupes encadrés par des prestataires confirmés",
+ 
     ],
   },
 ];
@@ -312,9 +308,9 @@ export default function Home() {
               <span>Bab Rayan.</span>
             </h1>
             <p>
-              Vos élèves vivent une matinée d'ateliers à Bab Rayan pendant que
-              leur venue contribue directement à l'autofinancement de
-              l'association, du foyer et de l'École Palmier.
+              Une prestation d'excellence, des ateliers menés par des
+              professionnels confirmés, entièrement au service des enfants de
+              Bab Rayan.
             </p>
             <div className="hero-actions">
               <button
@@ -455,8 +451,8 @@ export default function Home() {
             <h2>Quatre univers pour apprendre avec les mains.</h2>
             <p>
               Les ateliers sont encadrés par des prestataires qualifiés (chefs
-              pâtissiers, art therapists, éducateurs confirmés) et sont réalisés
-              avec du matériel de qualité professionnelle.
+              pâtissiers, art-thérapeutes, éducateurs confirmés) et sont
+              réalisés avec du matériel de qualité professionnelle.
             </p>
           </div>
 
@@ -658,8 +654,8 @@ export default function Home() {
               +212 610 023 555
             </a>
             <span>
-              <FiMapPin aria-hidden="true" />
-              4 Rue Bayt Lahm, Quartier Palmier, Casablanca
+              <FiMapPin aria-hidden="true" />4 Rue Bayt Lahm, Quartier Palmier,
+              Casablanca
             </span>
           </div>
 
@@ -703,8 +699,12 @@ export default function Home() {
         </div>
 
         <div className="footer-bottom">
-          <span>© {new Date().getFullYear()} Bab Rayan. Tous droits réservés.</span>
-          <span>Un modèle autofinancé au service du foyer et de l'École Palmier</span>
+          <span>
+            © {new Date().getFullYear()} Bab Rayan. Tous droits réservés.
+          </span>
+          <span>
+            Un modèle autofinancé au service du foyer et de l'École Palmier
+          </span>
         </div>
       </footer>
 
