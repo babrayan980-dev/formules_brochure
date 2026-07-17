@@ -586,7 +586,7 @@ nav a:hover {
 
 .gallery-section {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 0.82fr) minmax(0, 0.82fr) minmax(0, 0.9fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
   padding: 86px 0 20px;
 }
@@ -607,23 +607,56 @@ nav a:hover {
 }
 
 .gallery-1 {
-  min-height: 520px;
+  grid-column: 1 / -1;
+  min-height: clamp(360px, 42vw, 520px);
 }
 
 .gallery-2 {
-  margin-top: 48px;
   animation-delay: 0.12s;
 }
 
 .gallery-3 {
-  margin-top: 96px;
   animation-delay: 0.24s;
 }
 
 .gallery-4 {
-  margin-top: 40px;
-  min-height: 460px;
   animation-delay: 0.36s;
+}
+
+.gallery-duo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  width: min(1160px, calc(100% - 36px));
+  margin: 0 auto;
+  padding: 20px 0 40px;
+}
+
+.gallery-duo-item {
+  position: relative;
+  min-height: clamp(300px, 34vw, 440px);
+  overflow: hidden;
+  background: #eee;
+  border: 8px solid white;
+  border-radius: 34px;
+  box-shadow: var(--shadow);
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.gallery-duo-item img {
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.gallery-duo-item:hover {
+  box-shadow: 0 26px 68px rgba(103, 0, 15, 0.2);
+  transform: translateY(-8px);
+}
+
+.gallery-duo-item:hover img {
+  transform: scale(1.06);
 }
 
 .section {
@@ -1797,11 +1830,14 @@ nav a:hover {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .gallery-1,
+  .gallery-1 {
+    grid-column: 1 / -1;
+  }
+
   .gallery-2,
   .gallery-3,
   .gallery-4 {
-    min-height: 360px;
+    min-height: 320px;
     margin-top: 0;
   }
 }
@@ -1991,7 +2027,8 @@ nav a:hover {
   .contact-info,
   .practical-grid,
   .form-grid,
-  .checkbox-grid {
+  .checkbox-grid,
+  .gallery-duo {
     grid-template-columns: 1fr;
   }
 
