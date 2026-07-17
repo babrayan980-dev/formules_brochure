@@ -799,6 +799,27 @@ nav a:hover {
   }
 }
 
+.atelier-feature {
+  margin-top: clamp(24px, 4vw, 40px);
+}
+
+.atelier-feature-media {
+  position: relative;
+  min-height: clamp(260px, 42vw, 520px);
+  overflow: hidden;
+  border-radius: 32px;
+  box-shadow: 0 22px 60px rgba(33, 27, 24, 0.16);
+}
+
+.atelier-feature-media img {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.atelier-feature:hover .atelier-feature-media img {
+  transform: scale(1.05);
+}
+
 .formulas-section {
   padding-top: 40px;
 }
@@ -1794,7 +1815,8 @@ nav a:hover {
 
   .intro-section,
   .brochure-section,
-  .gallery-section {
+  .gallery-section,
+  .atelier-feature {
     grid-template-columns: 1fr;
   }
 

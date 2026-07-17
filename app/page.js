@@ -61,14 +61,13 @@ const formulas = [
       "Un atelier plus élaboré, techniques approfondies",
       "Format long pour aller au bout d'une réalisation",
       "Groupes encadrés par des prestataires confirmés",
- 
     ],
   },
 ];
 
 const galleryImages = [
   {
-    src: "/images/kids-workshop-1.png",
+    src: "/images/atelier-patisserie.png",
     alt: "Enfants de l'École Palmier pendant un atelier peinture",
   },
   {
@@ -304,13 +303,13 @@ export default function Home() {
           <div className="hero-copy">
             <span className="eyebrow">Écoles internationales · Casablanca</span>
             <h1>
-              Une sortie créative qui soutient les enfants de l'association{" "}
-              <span>Bab Rayan.</span>
+              Une sortie créative qui soutient les enfants de{" "}
+              <span>Bab Rayan</span>
             </h1>
             <p>
               Une prestation d'excellence, des ateliers menés par des
               professionnels confirmés, entièrement au service des enfants de
-              Bab Rayan.
+              Bab Rayan — et de l'autofinancement de l'association.
             </p>
             <div className="hero-actions">
               <button
@@ -332,7 +331,7 @@ export default function Home() {
           >
             <div className="photo-card photo-main">
               <Image
-                src="/images/kids-workshop-1.png"
+                src="/images/activite.jpeg"
                 alt={galleryImages[0].alt}
                 fill
                 sizes="(max-width: 900px) 92vw, 45vw"
@@ -418,8 +417,9 @@ export default function Home() {
               <span className="panel-kicker">03</span>
               <h3>Contribuer</h3>
               <p>
-                Chaque réservation soutient le foyer, l'École Palmier et le CFI
-                de Bab Rayan.
+                Le foyer, l'École Palmier et le CFI : trois piliers de
+                l'association Bab Rayan, financés directement par chaque
+                réservation.
               </p>
               <div className="paper-sticker green">RSE</div>
             </div>
