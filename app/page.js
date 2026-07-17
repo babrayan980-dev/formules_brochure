@@ -595,7 +595,7 @@ export default function Home() {
                 </span>
                 <span className="contact-text">
                   <span>Téléphone</span>
-                  <strong>+212 610 023 555</strong>
+                  <strong>+212 6 18 18 18 06</strong>
                 </span>
                 <FiArrowUpRight className="contact-arrow" aria-hidden="true" />
               </a>
@@ -659,7 +659,7 @@ export default function Home() {
             </a>
             <a href="tel:+212610023555">
               <FiPhone aria-hidden="true" />
-              +212 610 023 555
+              +212 6 18 18 18 06
             </a>
             <span>
               <FiMapPin aria-hidden="true" />4 Rue Bayt Lahm, Quartier Palmier,
