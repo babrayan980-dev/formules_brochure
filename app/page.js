@@ -52,7 +52,7 @@ const formulas = [
     ],
   },
   {
-    age: "8 - 10 ans",
+    age: "8 - 12 ans",
     name: "Parcours Immersion",
     subtitle: "1 atelier approfondi au choix, 1h30",
     price: "140",
