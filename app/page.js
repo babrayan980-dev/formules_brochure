@@ -67,7 +67,7 @@ const formulas = [
 
 const galleryImages = [
   {
-    src: "/images/atelier-patisserie.png",
+    src: "/images/gg.png",
     alt: "Enfants de l'École Palmier pendant un atelier peinture",
   },
   {
@@ -303,13 +303,14 @@ export default function Home() {
           <div className="hero-copy">
             <span className="eyebrow">Écoles internationales · Casablanca</span>
             <h1>
-              Une sortie créative qui soutient les enfants de{" "}
+              Une sortie créative qui soutient les enfants de <br />
               <span>Bab Rayan</span>
             </h1>
             <p>
-              Une prestation d'excellence, des ateliers menés par des
-              professionnels confirmés, entièrement au service des enfants de
-              Bab Rayan — et de l'autofinancement de l'association.
+              Une prestation d’excellence et des ateliers animés par des
+              professionnels confirmés, au service d’une cause essentielle :
+              soutenir les enfants de Bab Rayan en contribuant à
+              l’autofinancement durable de l’association.
             </p>
             <div className="hero-actions">
               <button
@@ -331,7 +332,7 @@ export default function Home() {
           >
             <div className="photo-card photo-main">
               <Image
-                src="/images/activite.jpeg"
+                src="/images/mainphoto.jpeg"
                 alt={galleryImages[0].alt}
                 fill
                 sizes="(max-width: 900px) 92vw, 45vw"
@@ -362,16 +363,18 @@ export default function Home() {
         <section className="intro-section">
           <div className="section-heading">
             <span className="eyebrow">Le concept</span>
-            <h2>Bab Rayan, une association en trois volets.</h2>
+            <h2>Bab Rayan une association en 3 volets</h2>
           </div>
           <p>
-            Bab Rayan est une association qui réunit un foyer d'enfants, l'École
-            Palmier qui les scolarise — et qui accueille aussi des enfants de
-            mères célibataires en situation de précarité — ainsi que le CFI, son
-            centre de formation et d'insertion. Reconnue d'utilité publique,
-            l'association ouvre ses ateliers aux classes des écoles
-            internationales le temps d'une sortie encadrée : une manière
-            concrète de soutenir durablement son action.
+            Reconnue d’utilité publique, l’Association Bab Rayan accompagne les
+            enfants et les jeunes en situation de vulnérabilité à travers trois
+            missions complémentaires : la protection de l’enfance, l’éducation
+            via l’École Palmier, et la formation professionnelle grâce à son
+            Centre de Formation et d’Insertion (CFI). Dans ce cadre,
+            l’association ouvre ses ateliers aux écoles internationales pour des
+            sorties pédagogiques et solidaires, offrant aux élèves une
+            expérience enrichissante tout en soutenant durablement les actions
+            menées en faveur des enfants et des jeunes accompagnés par Bab Rayan
           </p>
         </section>
 
@@ -439,7 +442,9 @@ export default function Home() {
                 src={image.src}
                 alt={image.alt}
                 fill
-                sizes="(max-width: 760px) 92vw, 31vw"
+                quality={100}
+                sizes="(max-width: 760px) 92vw, 600px"
+                unoptimized
               />
             </div>
           ))}
