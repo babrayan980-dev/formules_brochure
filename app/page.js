@@ -796,7 +796,7 @@ export default function Home() {
                     <option value="Parcours Découverte (4-8 ans)">
                       Parcours Découverte - 4 à 8 ans
                     </option>
-                    <option value="Parcours Immersion (8-10 ans)">
+                    <option value="Parcours Immersion (8-12 ans)">
                       Parcours Immersion - 8 à 10 ans
                     </option>
                     <option value="Prestation sur mesure">
