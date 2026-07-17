@@ -78,6 +78,10 @@ const galleryImages = [
     src: "/images/pic2.jpeg",
     alt: "Enfant souriant pendant une activité peinture",
   },
+  {
+    src: "/images/activite.jpeg",
+    alt: "Enfants pendant une activité encadrée à Bab Rayan",
+  },
 ];
 
 const Icons = [
@@ -442,7 +446,6 @@ export default function Home() {
                 src={image.src}
                 alt={image.alt}
                 fill
-                quality={100}
                 sizes="(max-width: 760px) 92vw, 600px"
                 unoptimized
               />

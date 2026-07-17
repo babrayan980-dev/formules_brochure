@@ -586,7 +586,7 @@ nav a:hover {
 
 .gallery-section {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 0.82fr) minmax(0, 0.82fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.82fr) minmax(0, 0.82fr) minmax(0, 0.9fr);
   gap: 18px;
   padding: 86px 0 20px;
 }
@@ -618,6 +618,12 @@ nav a:hover {
 .gallery-3 {
   margin-top: 96px;
   animation-delay: 0.24s;
+}
+
+.gallery-4 {
+  margin-top: 40px;
+  min-height: 460px;
+  animation-delay: 0.36s;
 }
 
 .section {
@@ -1785,6 +1791,18 @@ nav a:hover {
 
   .brochure-copy {
     max-width: 760px;
+  }
+
+  .gallery-section {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gallery-1,
+  .gallery-2,
+  .gallery-3,
+  .gallery-4 {
+    min-height: 360px;
+    margin-top: 0;
   }
 }
 
