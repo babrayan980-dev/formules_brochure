@@ -34,7 +34,7 @@ const ateliers = [
     text: "Recette simple préparée et dégustée sur place, encadrée par le CFI.",
     icon: "cake",
     color: "gold",
-    tag: "12 enfants maximum",
+    // tag: "12 enfants maximum",
   },
 ];
 
@@ -490,7 +490,7 @@ export default function Home() {
               adaptés sur demande.
             </p>
             <div className="capacity-badge">
-              <span className="capacity-number">40</span>
+              <span className="capacity-number">50</span>
               <span className="capacity-text">
                 <strong>Capacité maximale</strong>
               </span>
@@ -528,7 +528,7 @@ export default function Home() {
                 CFI de Bab Rayan. <br />(Muffins, brownies, madeleines, cake…)
               </p>
             </div>
-            <strong>+ 30 MAD</strong>
+            <strong>+ 50 MAD</strong>
           </div>
         </section>
 
