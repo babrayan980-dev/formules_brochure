@@ -489,6 +489,12 @@ export default function Home() {
               Tarif par enfant, groupe scolaire. Les créneaux peuvent être
               adaptés sur demande.
             </p>
+            <div className="capacity-badge">
+              <span className="capacity-number">40</span>
+              <span className="capacity-text">
+                <strong>Capacité maximale</strong>
+              </span>
+            </div>
           </div>
 
           <div className="formula-grid">
