@@ -43,7 +43,7 @@ const formulas = [
     age: "4 - 8 ans",
     name: "Parcours Découverte",
     subtitle: "2 ateliers au choix parmi 4, 1h chacun",
-    price: "120",
+    price: "140",
     accent: "dark",
     points: [
       "L'école choisit 2 ateliers parmi les 4 univers",
@@ -55,7 +55,7 @@ const formulas = [
     age: "8 - 12 ans",
     name: "Parcours Immersion",
     subtitle: "1 atelier approfondi au choix, 1h30",
-    price: "140",
+    price: "150",
     accent: "red",
     points: [
       "Un atelier plus élaboré, techniques approfondies",
@@ -336,7 +336,7 @@ export default function Home() {
           >
             <div className="photo-card photo-main">
               <Image
-                src="/images/mainphoto.jpeg"
+                src="/images/main.jpeg"
                 alt={galleryImages[0].alt}
                 fill
                 sizes="(max-width: 900px) 92vw, 45vw"
@@ -525,7 +525,7 @@ export default function Home() {
               <h3>Pause Gourmande</h3>
               <p>
                 Eau, jus et préparations maison réalisées par les stagiaires du
-                CFI de Bab Rayan.
+                CFI de Bab Rayan. <br />(Muffins, brownies, madeleines, cake…)
               </p>
             </div>
             <strong>+ 30 MAD</strong>
