@@ -561,7 +561,7 @@ export default function Home() {
           <div className="practical-grid">
             <div>
               <span>Découverte</span>
-              <strong>1h, 2 ateliers</strong>
+              <strong>2h, 2 ateliers</strong>
             </div>
             <div>
               <span>Immersion</span>
